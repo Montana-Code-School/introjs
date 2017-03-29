@@ -11,7 +11,7 @@ describe("FizzBuzz", function() {
     assert.equal(actual, expected);
   });
 
-  xit("can convert multiples of 3 to Fizz", function() {
+  it("can convert multiples of 3 to Fizz", function() {
     //Arrange
     var expected = "Fizz";
     //Act
@@ -20,7 +20,7 @@ describe("FizzBuzz", function() {
     assert.equal(actual, expected);
   });
 
-  xit("can convert multiples of 5 to Buzz", function() {
+ it("can convert multiples of 5 to Buzz", function() {
     //Arrange
     var expected = "Buzz";
     //Act
@@ -29,7 +29,7 @@ describe("FizzBuzz", function() {
     assert.equal(actual, expected);
   });
 
-  xit("can convert multiples of 3 and 5 to FizzBuzz", function() {
+  it("can convert multiples of 3 and 5 to FizzBuzz", function() {
     //Arrange
     var expected = "FizzBuzz";
     //Act
