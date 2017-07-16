@@ -1,40 +1,18 @@
 var assert = require('chai').assert;
 var fizzBuzz = require('./fizzBuzz');
 
+function fizzBuzzEvaluate(expected, number){
+  var actual = fizzBuzz(number);
+  assert.equal(actual, expected);
+}
+
 describe("FizzBuzz", function() {
-  it("can convert 1 to 1", function() {
-    //Arrange
-    var expected = "1";
-    //Act
-    var actual = fizzBuzz(1);
-    //Assert
-    assert.equal(actual, expected);
-  });
-
-  xit("can convert multiples of 3 to Fizz", function() {
-    //Arrange
-    var expected = "Fizz";
-    //Act
-    var actual = fizzBuzz(6);
-    //Assert
-    assert.equal(actual, expected);
-  });
-
-  xit("can convert multiples of 5 to Buzz", function() {
-    //Arrange
-    var expected = "Buzz";
-    //Act
-    var actual = fizzBuzz(10);
-    //Assert
-    assert.equal(actual, expected);
-  });
-
-  xit("can convert multiples of 3 and 5 to FizzBuzz", function() {
-    //Arrange
-    var expected = "FizzBuzz";
-    //Act
-    var actual = fizzBuzz(30);
-    //Assert
-    assert.equal(actual, expected);
-  });
+  it("returns 1 for 1", () => fizzBuzzEvaluate("1", 1));
+  it("returns Fizz for multiples of 3", () => fizzBuzzEvaluate("Fizz", 6));
+  it("returns Buzz for multiples of 5", () => fizzBuzzEvaluate("Buzz",10));
+  it("returns 2 for 2", () => fizzBuzzEvaluate("2", 2));
+  it("returns FizzBuzz for multiples of 3 and 5",
+    () => fizzBuzzEvaluate("FizzBuzz", 30));
+  it("returns FizzBuzz for 1500000000",
+    () => fizzBuzzEvaluate("FizzBuzz", 1500000000));
 });

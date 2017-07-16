@@ -1,7 +1,7 @@
 var assert = require('chai').assert;
 var TicTacToe = require('./ticTacToe');
 
-describe("Tic Tac Toe", function() {
+xdescribe("Tic Tac Toe", function() {
   it("can place an x at 1, 1", function() {
     //Arrange
     var ticTacToe = new TicTacToe();
