@@ -1,11 +1,11 @@
 ## Introduction to JavaScript Exercises
 
 These are test driven development oriented exercises from the
-[Introduction to JavaScript and Web Development]
-(http://montanacodeschool.com/other-courses/intro-to-javascript-web-development-26501983145/) two day class offered by [Montana Code School](http://montanacodeschool.com).
+[Introduction to JavaScript and Web Development
+](http://montanacodeschool.com/other-courses/intro-to-javascript-web-development-26501983145/) two day class offered by [Montana Code School](http://montanacodeschool.com).
 
-The first is from the [Fizz Buzz drinking game]
-(https://en.wikipedia.org/wiki/Fizz_buzz),
+The first is from the
+[Fizz Buzz drinking game](https://en.wikipedia.org/wiki/Fizz_buzz),
 where multiples of 3 are converted to 'Fizz', multiples of 5 to 'Buzz', and
 multiples of 3 and 5 are converted to 'FizzBuzz'. You need to add to the
 implementation in fizzBuzz.js. And change the "xit" tests to "it" to activate
@@ -18,6 +18,9 @@ in romanNumeralConverterTest.js. You can add more tests for more roman
 number examples.
 
 The third is the beginning of a Tic Tac Toe game.
+
+Continue the class with the Full Stack Web Application [IntroJS-TODO
+](https://github.com/Montana-Code-School/introjs-todo)
 
 ## Getting Started
 
