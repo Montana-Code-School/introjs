@@ -4,7 +4,7 @@
   "description": "Some activities for a Montana Code School Introduction to JavaScript Class",
   "main": "",
   "scripts": {
-    "test": "mocha --reporter spec *Test.js",
+    "test": "mocha --reporter progress *Test.js",
     "lint": "node_modules/.bin/eslint *.js"
   },
   "author": "Harold Shinsato",
