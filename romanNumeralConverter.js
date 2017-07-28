@@ -30,35 +30,24 @@ function countRomans(roman, romanDigit, romanDigitVal) {
 }
 
 function nextDigitIsBigger(romanDigit, romanDigitNext) {
-  if (romanToNumber(romanDigit) < romanToNumber(romanDigitNext)) {
-    return true;
-  } else {
-    return false;
-  }
+  return romanToNumber(romanDigit) < romanToNumber(romanDigitNext);
 }
 
 function romanToNumber(romanDigit) {
-  if (romanDigit == "I") {
-    return 1;
-  } else if (romanDigit == "V") {
-    return 5;
-  } else if (romanDigit == "X") {
-    return 10;
-  } else if (romanDigit == "L") {
-    return 50;
-  } else if (romanDigit == "C") {
-    return 100;
-  } else if (romanDigit == "D") {
-    return 500;
-  } else if (romanDigit == "M") {
-    return 1000;
-  }
+  let num = 0;
+  ROMAN_VALS.forEach((valPair) => {
+    if (valPair[0] == romanDigit) {
+      num = valPair[1];
+    }
+  });
+  return num;
 }
-// ROMAN_VALS.forEach((valPair) => {
-//   if (valPair[0] == romanDigit) {
-//     return valPair[1];
-//   }
-// });
-// return 0;
+
+function convert(){
+  let roman = document.getElementById('Roman').value;
+  let number = romanNumeralConverter(roman);
+  document.getElementById('NumberResult').innerHTML = number;
+  return false;
+}
 
 module.exports = romanNumeralConverter;
