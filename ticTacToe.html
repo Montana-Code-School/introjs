@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>Let's Play Tic Tac Toe</title>
+</head>
+<body>
+    <center>Use your mouse to click on a square.</center>
+    <center><div id="player">X</div>Plays<div id="winner"></div></center>
+
+<table align="center" id="tblMain" border="1" style="cursor: pointer;" cellpadding="10">
+    <tr>
+        <td id="1-1">-</td>
+        <td id="1-2">-</td>
+        <td id="1-3">-</td>
+    </tr>
+    <tr>
+        <td id="2-1">-</td>
+        <td id="2-2">-</td>
+        <td id="2-3">-</td>
+    </tr>
+    <tr>
+        <td id="3-1">-</td>
+        <td id="3-2">-</td>
+        <td id="3-3">-</td>
+    </tr>
+</table>
+<br/>
+<script>
+
+function TicTacToe() {
+  this.grid = [
+    ["-", "-", "-"],
+    ["-", "-", "-"],
+    ["-", "-", "-"]
+  ];
+
+  this.set = function(horiz, vert, player) {
+    this.grid[vert - 1][horiz - 1] = player;
+  };
+  this.get = function(horiz, vert) {
+    return this.grid[vert - 1][horiz - 1];
+  };
+  this.printGrid = function() {
+    var gridStr = "";
+    for (var row = 0; row < 3; row++) {
+      var rowStr = "";
+      for (var col = 0; col < 3; col++) {
+        rowStr += this.grid[row][col] + " ";
+      };
+      gridStr += rowStr + "\n";
+    };
+    return gridStr;
+  };
+
+  this.winner = function() {
+    if (this.grid[0][0]==="X" && this.grid[1][0]==="X" && this.grid[2][0]==="X") {
+      return "X";
+    } else {
+      return "-";
+    }
+  };
+}
+var ticTacToe = new TicTacToe();
+console.log(ticTacToe.printGrid());
+var tbl = document.getElementById("tblMain");
+if (tbl != null) {
+    for (var i = 0; i < tbl.rows.length; i++) {
+        for (var j = 0; j < tbl.rows[i].cells.length; j++) {
+            tbl.rows[i].cells[j].onclick = (function (i, j) {
+                return function () {
+                  var tableCellID = (i+1) + "-" + (j+1);
+                  var player = document.getElementById("player").innerHTML;
+                  document.getElementById(tableCellID).innerHTML = player;
+                  ticTacToe.set(j+1, i+1, player);
+                  console.log(ticTacToe.printGrid());
+                  if (player === 'X') {
+                    player = 'O';
+                  } else {
+                    player = 'X';
+                  }
+                  document.getElementById("player").innerHTML = player;
+                  document.getElementById("winner").innerHTML
+                    = ticTacToe.winner();
+                };
+            }(i, j));
+        }
+    }
+}
+</script>
+</body>
+</html>
