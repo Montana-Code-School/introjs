@@ -4,12 +4,15 @@
   "description": "Some activities for a Montana Code School Introduction to JavaScript Class",
   "main": "",
   "scripts": {
-    "test": "mocha --reporter spec *Test.js"
+    "test": "mocha --reporter spec *Test.js",
+    "lint": "node_modules/.bin/eslint *.js"
   },
   "author": "Harold Shinsato",
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
+    "eslint": "^4.3.0",
+    "eslint-plugin-import": "^2.7.0",
     "mocha": "^3.0.2"
   }
 }

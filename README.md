@@ -36,8 +36,7 @@ in the class.
 
 ## Learning Resources
 
-There are many online learning platforms, many of which cost money. We highly recommend these
-two free resources to support your learning.
+There are many online learning platforms, many of which cost money. We highly recommend these free resources to support your learning.
 * [Exercism - TDD oriented exercises in many languages](http://exercism.io/)
 * [FreeCodeCamp.org - methodical exercises for programming](http://freecodecamp.org)
 * [JavaScript Koans](https://github.com/mrdavidlaing/javascript-koans)
