@@ -47,4 +47,10 @@ function romanToNumber(romanDigit) {
   return result;
 }
 
+function convert() {
+  let roman = document.getElementById("Roman").value;
+  let convertedNumber = romanNumeralConverter(roman);
+  document.getElementById("NumberResult").innerHTML = convertedNumber;
+}
+
 module.exports = romanNumeralConverter;
